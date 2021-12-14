@@ -22,7 +22,16 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
-    body: Center(
+    body: const Center(
+      child: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Text(
+          "Programming knowledge",
+          textAlign: TextAlign.end,
+        ),
+      ),
+    ),
+      /*
         child: Container (
           constraints: const BoxConstraints(
               maxHeight: 300.0,
@@ -39,7 +48,9 @@ class _MyHomeAppState extends State<MyHomeApp> {
           ),
           child: const Text("Programming knowledge", textAlign: TextAlign.center,),
         ),
-      ),
+       */
+
+
       /*
         child: RaisedButton.icon(
             onPressed: () => print("Button pressed"),
