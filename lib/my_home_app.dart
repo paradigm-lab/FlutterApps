@@ -11,7 +11,7 @@ class MyHomeApp extends StatefulWidget {
 class _MyHomeAppState extends State<MyHomeApp> {
 
   void buttonAction(String name) {
-    print("Button pressed " + name);
+    print("Button pressed by the " + name);
   }
 
   @override
@@ -22,10 +22,50 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+
+    body: Center (
+      child: IconButton(icon: Icon(Icons.add),
+        onPressed: () => print("Button pressed"),
+        color: Colors.red,
+        iconSize: 40.0,
+        splashColor: Colors.green,
+        padding: EdgeInsets.all(20.0),
+        tooltip: 'Description of the button',
+
+      ),
+    ),
+
+
+      /*
+      body: Center(
+          child: OutlineButton(
+            onPressed: () => print("Outline button pressed"),
+            child: const Icon(Icons.add),
+            borderSide: const BorderSide(
+                color: Colors.red,
+                width: 5.0,
+                style: BorderStyle.solid
+            ),
+          )
+      ),
+
+
+      body: const Center(
+        child: RaisedButton(
+          onPressed: null,
+          child: Icon(Icons.add),
+          color: Colors.red,
+          colorBrightness: Brightness.dark,
+          elevation: 10,
+          disabledColor: Colors.cyan,
+        ),
+      ),
+
+
       body: Center(
         child: FlatButton(
-          child: Icon(Icons.add),
-          onPressed: () => buttonAction("collins"),
+          child: const Icon(Icons.add),
+          onPressed: () => buttonAction("Paradigm"),
           color: Colors.red,
           colorBrightness: Brightness.dark,
           disabledColor: Colors.cyan,
@@ -33,7 +73,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         ),
       ),
 
-      /*
+
       body: Center(child: RichText(text: const TextSpan(
           text: "Programming",
           style: TextStyle(color: Colors.cyan, fontSize: 15,),
