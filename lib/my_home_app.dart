@@ -22,6 +22,25 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+      body: Image.asset(
+        'asset/pic5.jpg',
+        height: 100.0,
+        frameBuilder: (
+            BuildContext context,
+            Widget child,
+            _,
+            bool wasSynchronouslyLoaded
+        ) {
+          return Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: child,
+          );
+      },
+
+      ),
+
+
+      /*
     body: const Center(
       child: Padding(
         padding: EdgeInsets.all(20.0),
@@ -31,7 +50,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         ),
       ),
     ),
-      /*
+
         child: Container (
           constraints: const BoxConstraints(
               maxHeight: 300.0,
