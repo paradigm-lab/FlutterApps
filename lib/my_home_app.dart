@@ -22,8 +22,15 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
-      body: Image.asset(
+      body: Container(
+        height: double.infinity,
+          width: double.infinity,
+        child: Image.asset(
         'asset/pic5.jpg',
+        ),
+
+
+        /*
         height: 100.0,
         frameBuilder: (
             BuildContext context,
@@ -40,6 +47,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
             child: child,
           );
       },
+        */
 
       ),
 
