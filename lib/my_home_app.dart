@@ -24,8 +24,15 @@ class _MyHomeAppState extends State<MyHomeApp> {
 
     body: Center(
         child: Container (
-          color: Colors.red,
-          padding: const EdgeInsets.only(left: 10.0, right: 20.0, top: 30, bottom: 40.0),
+          padding: const EdgeInsets.only(
+              left: 10.0,
+              right: 20.0,
+              top: 30,
+              bottom: 40.0
+          ),
+          decoration: const BoxDecoration(
+              color: Colors.red,
+          ),
           child: const Text("Programming knowledge"),
         ),
       ),
