@@ -26,7 +26,8 @@ class _MyHomeAppState extends State<MyHomeApp> {
         child: RaisedButton.icon(
             onPressed: () => print("Button pressed"),
             icon: const Icon(Icons.android),
-            label: const Text("Android")
+            label: const Text("Android"),
+          color: Colors.red,
         ),
         /*
         decoration: const ShapeDecoration(
