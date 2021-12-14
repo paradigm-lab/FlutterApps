@@ -31,8 +31,12 @@ class _MyHomeAppState extends State<MyHomeApp> {
             _,
             bool wasSynchronouslyLoaded
         ) {
-          return Padding(
-            padding: const EdgeInsets.all(10.0),
+          return Container(
+            padding: const EdgeInsets.all(100.0),
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              shape: BoxShape.circle,
+            ),
             child: child,
           );
       },
