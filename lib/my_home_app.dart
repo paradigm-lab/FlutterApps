@@ -27,7 +27,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
           width: double.infinity,
         child: Image.asset(
         'asset/pic5.jpg',
-          fit: BoxFit.cover,
+          fit: BoxFit.fill,
         ),
 
 
