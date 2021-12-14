@@ -39,7 +39,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () => print("FAB pressed"),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.red[900],
       ),
 
 
