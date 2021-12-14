@@ -23,8 +23,12 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
 
     body: Center(
-      child: Ink(
-        //color: Colors.blue,
+        child: RaisedButton.icon(
+            onPressed: () => print("Button pressed"),
+            icon: const Icon(Icons.android),
+            label: const Text("Android")
+        ),
+        /*
         decoration: const ShapeDecoration(
             shape: CircleBorder(),
             color: Colors.blue
@@ -34,10 +38,11 @@ class _MyHomeAppState extends State<MyHomeApp> {
           ),
         onPressed: () => print("Button is pressed"),
         ),
-      ),
+        */
     ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+      floatingActionButton: FloatingActionButton.extended(
+        label: const Text("Add"),
+        icon: const Icon(Icons.add),
         onPressed: () => print("FAB pressed"),
         backgroundColor: Colors.red[900],
         tooltip: 'Tooltip',
