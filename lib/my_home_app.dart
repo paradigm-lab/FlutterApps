@@ -40,6 +40,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         child: Icon(Icons.add),
         onPressed: () => print("FAB pressed"),
         backgroundColor: Colors.red[900],
+        tooltip: 'Tooltip',
       ),
 
 
