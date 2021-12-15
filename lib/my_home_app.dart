@@ -27,7 +27,8 @@ class _MyHomeAppState extends State<MyHomeApp> {
           width: double.infinity,
         child: Image.asset(
         'asset/pic5.jpg',
-         alignment: Alignment.bottomCenter,
+         repeat: ImageRepeat.repeat,
+         //alignment: Alignment.bottomCenter,
           //fit: BoxFit.scaleDown,
         ),
 
