@@ -23,14 +23,34 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
 
       body: Container(
-          height: double.infinity,
+          height: 300.0,
           width: double.infinity,
+          child: ListView(children: const <Widget>[
+            Text("Programming Knowledge"),
+            ],
+          ),
+
+        /*
+          child: Image.network(
+              'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DLPN-7eCy2KZKQcNG0jvAQHaEU%26pid%3DApi&f=1',
+            loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
+                return Center(
+                  child: Text('Loading image'),
+                );
+            },  errorBuilder: (BuildContext context, Object error, StackTrace st) {
+                return Center (
+                  child: Text('Error occurred'),
+                );
+            }),
+          ),
+
         child: Image.asset(
         'asset/pic5.jpg',
          repeat: ImageRepeat.noRepeat,
          //alignment: Alignment.bottomCenter,
           //fit: BoxFit.scaleDown,
         ),
+        */
 
 
         /*
