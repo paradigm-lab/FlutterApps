@@ -13,6 +13,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
   void buttonAction(String name) {
     print("Button pressed by the " + name);
   }
+  final List<int> _listItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +28,12 @@ class _MyHomeAppState extends State<MyHomeApp> {
           width: double.infinity,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: const <Widget>[
-            Text("Programming Knowledge"),
-            Text("Programming Knowledge"),
-            Text("Programming Knowledge"),
-            Text("Programming Knowledge"),
-            Text("Programming Knowledge"),
-            Text("Programming Knowledge"),
-            Text("Programming Knowledge"),
-            ],
+            children: _listItems.map((e) {
+              return Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text('Count: $e'),
+              );
+            }).toList(),
           ),
 
         /*
