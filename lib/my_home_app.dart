@@ -26,13 +26,24 @@ class _MyHomeAppState extends State<MyHomeApp> {
       body: Container (
         width: double.infinity,
         child: ListView.builder(
-          padding: const EdgeInsets.all(10.0),
+          //padding: const EdgeInsets.all(10.0),
             itemBuilder: (BuildContext context, int index) {
             return Dismissible(
                 key: const ValueKey(123),
+                direction: DismissDirection.endToStart,
                 onDismissed: (direction) {
                   print(direction);
                 },
+              background: Container(
+                color: Colors.red,
+                child: const Icon(
+                  Icons.delete,
+                  color: Colors.white,
+                  size: 40.0,
+                ),
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.only(right: 20.0),
+              ),
                 child: Card(
                   margin: const EdgeInsets.symmetric(
                     horizontal: 15.0,
