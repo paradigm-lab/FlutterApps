@@ -24,9 +24,13 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
 
       body: Container(
-          height: 50.0,
           width: double.infinity,
-          child: ListView(
+          child: ListView.builder(itemCount: _listItems.length, itemBuilder: (BuildContext context, int index) {
+            return Text('Count: ${_listItems[index]}');
+          },)
+
+          /*
+          ListView(
             scrollDirection: Axis.horizontal,
             children: _listItems.map((e) {
               return Padding(
@@ -36,7 +40,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
             }).toList(),
           ),
 
-        /*
+
           child: Image.network(
               'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DLPN-7eCy2KZKQcNG0jvAQHaEU%26pid%3DApi&f=1',
             loadingBuilder: (BuildContext context, Widget child, ImageChunkEvent loadingProgress) {
