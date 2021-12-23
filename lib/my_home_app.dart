@@ -44,6 +44,11 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+      body: const Center(
+        child: TextField(),
+      ),
+
+      /*
       body: Center(
         child: Text(
           '$count',
@@ -51,7 +56,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         ),
       ),
 
-      /*
+
       body: Container (
         width: double.infinity,
         child: ListView.builder(
