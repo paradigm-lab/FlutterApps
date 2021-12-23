@@ -13,6 +13,24 @@ class MyHomeApp extends StatefulWidget {
 class _MyHomeAppState extends State<MyHomeApp> {
   var count = 0;
 
+  // We write all the code after the initState super state
+  @override
+  void initState() {
+    super.initState();
+    // All the initialization that we wanna do like Remember me
+  }
+
+  // In dispose we read all the dispose before the super keyword
+  @override
+  void dispose() {
+
+
+    super.dispose();
+    // It is used for closing all the existing things
+    // By disposing the controllers, Global keys
+
+  }
+
   void buttonAction(String name) {
     print("Button pressed by the " + name);
   }
