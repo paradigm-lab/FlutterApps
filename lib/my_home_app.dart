@@ -23,9 +23,17 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
 
       body: Container(
-          height: 300.0,
+          height: 50.0,
           width: double.infinity,
-          child: ListView(children: const <Widget>[
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: const <Widget>[
+            Text("Programming Knowledge"),
+            Text("Programming Knowledge"),
+            Text("Programming Knowledge"),
+            Text("Programming Knowledge"),
+            Text("Programming Knowledge"),
+            Text("Programming Knowledge"),
             Text("Programming Knowledge"),
             ],
           ),
