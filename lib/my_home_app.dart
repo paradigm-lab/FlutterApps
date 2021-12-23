@@ -23,6 +23,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+      /*
       body: Container (
         width: double.infinity,
         child: ListView.builder(
@@ -34,6 +35,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
                 onDismissed: (direction) {
                   print(direction);
                 },
+              //confirmDismiss: ,
               background: Container(
                 color: Colors.red,
                 child: const Icon(
@@ -55,17 +57,16 @@ class _MyHomeAppState extends State<MyHomeApp> {
             );
 
 
-            /*
             return ListTile(
               title: Text("Count => ${_listItems[index]}"),
             );
-             */
+
         },
             //separatorBuilder: (BuildContext context, int index) => const Divider(color: Colors.red,),
             itemCount: _listItems.length),
 
 
-      /*
+
       Container(
           width: double.infinity,
           child: ListView.builder(itemCount: _listItems.length, itemBuilder: (BuildContext context, int index) {
@@ -113,10 +114,8 @@ class _MyHomeAppState extends State<MyHomeApp> {
          //alignment: Alignment.bottomCenter,
           //fit: BoxFit.scaleDown,
         ),
-        */
 
 
-        /*
         height: 100.0,
         frameBuilder: (
             BuildContext context,
@@ -133,12 +132,12 @@ class _MyHomeAppState extends State<MyHomeApp> {
             child: child,
           );
       },
-        */
+
 
       ),
 
 
-      /*
+
     body: const Center(
       child: Padding(
         padding: EdgeInsets.all(20.0),
