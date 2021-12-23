@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 // We sue the statefulWidget when we have the functionality in our application
+
+// we can use the setState if we are using the statefulWidget
 class MyHomeApp extends StatefulWidget {
   const MyHomeApp({Key? key}) : super(key: key);
 
@@ -9,6 +11,7 @@ class MyHomeApp extends StatefulWidget {
 }
 
 class _MyHomeAppState extends State<MyHomeApp> {
+  var count = 0;
 
   void buttonAction(String name) {
     print("Button pressed by the " + name);
@@ -21,6 +24,13 @@ class _MyHomeAppState extends State<MyHomeApp> {
       appBar: AppBar(
         title: const Text("Programming Knowledge"),
         backgroundColor: Colors.red,
+      ),
+
+      body: Center(
+        child: Text(
+          '$count',
+          style: const TextStyle(fontSize: 20.0),
+        ),
       ),
 
       /*
@@ -189,7 +199,14 @@ class _MyHomeAppState extends State<MyHomeApp> {
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Add"),
         icon: const Icon(Icons.add),
-        onPressed: () => print("FAB pressed"),
+        onPressed: () {
+          print("FAB pressed");
+
+          // When we use the setState method it will call the build method
+          setState(() {
+            count++;
+          });
+        },
         backgroundColor: Colors.red[900],
         tooltip: 'Tooltip',
       ),
