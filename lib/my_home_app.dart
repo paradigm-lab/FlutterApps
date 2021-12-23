@@ -26,8 +26,18 @@ class _MyHomeAppState extends State<MyHomeApp> {
       body: Container(
           width: double.infinity,
           child: ListView.builder(itemCount: _listItems.length, itemBuilder: (BuildContext context, int index) {
-            return Text('Count: ${_listItems[index]}');
-          },)
+            //return Text('Count: ${_listItems[index]}');
+            return ListTile(
+              title: Text("Count => ${_listItems[index]}"),
+              subtitle: const Text('PK'),
+              leading: const Icon(Icons.done),
+              trailing: const Icon(Icons.close),
+              onTap: () {
+                print('Pressed ${_listItems[index]}');
+                },
+              );
+            },
+          )
 
           /*
           ListView(
