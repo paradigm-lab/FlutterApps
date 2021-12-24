@@ -13,9 +13,9 @@ class MyHomeApp extends StatefulWidget {
 
 class _MyHomeAppState extends State<MyHomeApp> {
 
+  /*
   List<int> dummy = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  /*
   var _textController;
 
   var count = 0;
@@ -54,6 +54,14 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+    body: Container(
+      height: 200.0,
+      width: 200.0,
+      color: Colors.red,
+      ),
+    );
+
+    /*
       // GridView
       body: GridView(
         scrollDirection: Axis.vertical,
@@ -78,7 +86,6 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
     );
 
-      /*
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
