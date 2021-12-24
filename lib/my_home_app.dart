@@ -90,6 +90,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
               labelText: 'Name',
               labelStyle: const TextStyle(color: Colors.yellow),
           ),
+            onChanged: (value) => print(value),
         ),
       ),
     ),
@@ -101,7 +102,6 @@ class _MyHomeAppState extends State<MyHomeApp> {
           style: const TextStyle(fontSize: 20.0),
         ),
       ),
-
 
       body: Container (
         width: double.infinity,
