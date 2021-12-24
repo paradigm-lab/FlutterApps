@@ -8,7 +8,17 @@ class MyHomeApp extends StatefulWidget {
   _MyHomeAppState createState() => _MyHomeAppState();
 }
 
+
 class _MyHomeAppState extends State<MyHomeApp> {
+
+  var _textController;
+
+  @override
+  void initState() {
+    super.initState();
+    _textController = TextEditingController();
+    _textController.text = "My First Flutter Project";
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +28,15 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+      body: Container(
+        child: Column(
+          children: [
+            TextField(
+              controller: _textController,
+            ),
+          ],
+        ),
+      ),
     );
   }
 
