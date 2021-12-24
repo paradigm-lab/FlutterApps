@@ -7,6 +7,16 @@ class screen2 extends StatelessWidget {
       body: Center(
         child: Text("Screen2"),
       ),
+
+
+      /*
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.ac_unit),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
+      */
     );
   }
 }
