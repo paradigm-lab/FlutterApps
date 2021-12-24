@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
-//import './my_home_app.dart';
-import './my_project.dart';
+import './my_home_app.dart';
+//import './my_project.dart';
 
 void main() => runApp(MyApp());
 
