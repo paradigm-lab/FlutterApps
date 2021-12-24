@@ -1,4 +1,4 @@
-import 'package:demo/screen2.dart';
+//import 'package:demo/screen2.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 
@@ -11,14 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomeApp(),
 
-
+      /*
       // The route takes a map
       routes: {
         screen2.routeName: (BuildContext context) => screen2(),
       },
+      */
     );
   }
 }
