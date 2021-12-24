@@ -67,7 +67,10 @@ class _MyHomeAppState extends State<MyHomeApp> {
         onPressed: () {
 
           // Using the popAndPushNamed this take the screen out whereby we can't pop the screen again
-          Navigator.of(context).popAndPushNamed(screen2.routeName);
+          Navigator.of(context).pushNamed(
+              screen2.routeName,
+              arguments: "Navigation is working",
+          );
 
           /*
           Navigator.of(context).push(
