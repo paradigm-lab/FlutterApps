@@ -66,7 +66,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         child: const Icon(Icons.ac_unit),
         onPressed: () {
 
-          Navigator.of(context).pushNamed('/screen-2');
+          Navigator.of(context).pushNamed(screen2.routeName);
 
           /*
           Navigator.of(context).push(

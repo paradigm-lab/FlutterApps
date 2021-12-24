@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const MyHomeApp(),
+      home: MyHomeApp(),
+
 
       // The route takes a map
       routes: {
-        '/screen-2': (BuildContext context) => screen2(),
+        screen2.routeName: (BuildContext context) => screen2(),
       },
     );
   }
