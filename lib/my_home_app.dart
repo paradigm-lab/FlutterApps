@@ -49,8 +49,10 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
-      body: const Center(
-        child: TextField(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: TextField(
           // Takes a boolean value
           autocorrect: true,
           // It is used to make the TextField to automatically been selected
@@ -72,9 +74,25 @@ class _MyHomeAppState extends State<MyHomeApp> {
           keyboardType: TextInputType.emailAddress,
 
           // Text the input as the password
-          obscureText: true,
+          //obscureText: true,
+          decoration: InputDecoration(
+              contentPadding: const EdgeInsets.all(30.0),
+
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20.0),
+                borderSide: const BorderSide(),
+              ),
+              filled: true,
+              fillColor: Colors.green[50],
+              hintText: "Enter name",
+              hintStyle: const TextStyle(color: Colors.red),
+              icon: const Icon(Icons.person),
+              labelText: 'Name',
+              labelStyle: const TextStyle(color: Colors.yellow),
+          ),
         ),
       ),
+    ),
 
       /*
       body: Center(
