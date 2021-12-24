@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
       // The route takes a map
       routes: {
-        '/screen-2': (BuildContext context) => screen2()
+        '/screen-2': (BuildContext context) => screen2(),
       },
     );
   }
