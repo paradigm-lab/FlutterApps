@@ -55,6 +55,11 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+
+
+    );
+
+    /*
     body: Center(
       child: Container(
         height: MediaQuery.of(context).size.height / 2,
@@ -82,7 +87,6 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
     );
 
-    /*
       // GridView
       body: GridView(
         scrollDirection: Axis.vertical,
