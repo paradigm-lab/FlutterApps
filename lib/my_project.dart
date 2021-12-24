@@ -17,7 +17,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
   void initState() {
     super.initState();
     _textController = TextEditingController();
-    _textController.text = "My First Flutter Project";
+    _textController.text = "2";
   }
 
   @override
@@ -39,6 +39,17 @@ class _MyHomeAppState extends State<MyHomeApp> {
           children: [
             TextField(
               controller: _textController,
+            ),
+
+            // SizedBox is used to specify the width and height of every widget
+            SizedBox(
+              height: 300.0,
+             child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (BuildContext context, int index) => ListTile(
+                    title: Text("${(index + 1) * int.parse(_textController.text)}"),
+                ),
+              ),
             ),
           ],
         ),
