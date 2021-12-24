@@ -13,6 +13,9 @@ class MyHomeApp extends StatefulWidget {
 
 class _MyHomeAppState extends State<MyHomeApp> {
 
+  List<int> dummy = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  /*
   var _textController;
 
   var count = 0;
@@ -41,6 +44,8 @@ class _MyHomeAppState extends State<MyHomeApp> {
   }
   final List<int> _listItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
+   */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +54,31 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
+      // GridView
+      body: GridView(
+        scrollDirection: Axis.vertical,
+
+        // Using reverse takes every thing at the bottom from the position to the list
+        //reverse: true,
+        controller: ScrollController(),
+        physics: const ScrollPhysics(),
+        padding: const EdgeInsets.all(10.0),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 20.0,
+          crossAxisSpacing: 20.0,
+        ),
+        children: dummy.map((e) => Container(
+          height: 100.0,
+          width: 100.0,
+          color: Colors.red,
+          alignment: Alignment.center,
+          child: Text("$e"),
+        )).toList(),
+      ),
+    );
+
+      /*
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -95,7 +125,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
     ),
 
-      /*
+
       body: Center(
         child: Text(
           '$count',
@@ -263,7 +293,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
           ),
         onPressed: () => print("Button is pressed"),
         ),
-        */
+
 
 
       floatingActionButton: IconButton(
@@ -274,7 +304,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
 
 
-      /*
+
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Add"),
         icon: const Icon(Icons.add),
@@ -401,7 +431,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         ]
         ),
          */
-      );
+
   }
 }
 
