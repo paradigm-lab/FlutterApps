@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 // We sue the statefulWidget when we have the functionality in our application
@@ -11,20 +12,24 @@ class MyHomeApp extends StatefulWidget {
 }
 
 class _MyHomeAppState extends State<MyHomeApp> {
+
+  var _textController;
+
   var count = 0;
 
   // We write all the code after the initState super state
   @override
   void initState() {
     super.initState();
+    _textController = TextEditingController();
+    _textController.text = 'Programming knowledge';
     // All the initialization that we wanna do like Remember me
   }
 
   // In dispose we read all the dispose before the super keyword
   @override
   void dispose() {
-
-
+    _textController.dispose();
     super.dispose();
     // It is used for closing all the existing things
     // By disposing the controllers, Global keys
@@ -45,7 +50,30 @@ class _MyHomeAppState extends State<MyHomeApp> {
       ),
 
       body: const Center(
-        child: TextField(),
+        child: TextField(
+          // Takes a boolean value
+          autocorrect: true,
+          // It is used to make the TextField to automatically been selected
+          // It is false by default
+          autofocus: true,
+
+          //controller: _textController,
+
+          // It is and enabled future that takes a boolean value and by default
+          // It is true
+          enabled: true,
+
+          // It is used for the cut, copy, select all and paste
+          // By default it's true
+          enableInteractiveSelection: false,
+
+          enableSuggestions: false,
+
+          keyboardType: TextInputType.emailAddress,
+
+          // Text the input as the password
+          obscureText: true,
+        ),
       ),
 
       /*
@@ -219,6 +247,16 @@ class _MyHomeAppState extends State<MyHomeApp> {
         ),
         */
 
+
+      floatingActionButton: IconButton(
+        icon: Icon(Icons.add),
+        onPressed: () {
+          print(_textController.text);
+        },
+      ),
+
+
+      /*
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Add"),
         icon: const Icon(Icons.add),
@@ -233,7 +271,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red[900],
         tooltip: 'Tooltip',
       ),
-
+      */
 
     /*
     body: Center (
