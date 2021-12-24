@@ -8,9 +8,11 @@ class screen2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //var arguments = ModalRoute.of(context).settings.arguments as List<String>;
+
     return const Scaffold(
       body: Center(
-        child: Text("Screen2"),
+        child: Text("The text widget"),
       ),
 
 
