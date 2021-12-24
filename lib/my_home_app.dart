@@ -65,9 +65,15 @@ class _MyHomeAppState extends State<MyHomeApp> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.ac_unit),
         onPressed: () {
+
+          Navigator.of(context).pushNamed('/screen-2');
+
+          /*
           Navigator.of(context).push(
             MaterialPageRoute(builder: (BuildContext context) => screen2())
           );
+          */
+
         },
       ),
     );
