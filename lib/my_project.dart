@@ -42,8 +42,8 @@ class _MyHomeAppState extends State<MyHomeApp> {
             ),
 
             // SizedBox is used to specify the width and height of every widget
-            SizedBox(
-              height: 300.0,
+            Expanded(
+              //height: 300.0,
              child: ListView.builder(
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) => ListTile(
@@ -54,6 +54,14 @@ class _MyHomeAppState extends State<MyHomeApp> {
           ],
         ),
       ),
+
+      floatingActionButton: IconButton(
+        icon: const Icon(Icons.done),
+        onPressed: () => {
+          setState(() {}),
+        },
+      ),
+
     );
   }
 
