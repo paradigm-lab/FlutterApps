@@ -1,3 +1,4 @@
+import 'package:demo/screen2.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -59,8 +60,16 @@ class _MyHomeAppState extends State<MyHomeApp> {
         height: MediaQuery.of(context).size.height / 2,
         width: MediaQuery.of(context).size.width / 2,
         color: Colors.red,
+        ),
       ),
-    ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.ac_unit),
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (BuildContext context) => screen2())
+          );
+        },
+      ),
     );
 
     /*
