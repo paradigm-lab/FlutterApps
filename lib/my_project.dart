@@ -21,6 +21,12 @@ class _MyHomeAppState extends State<MyHomeApp> {
   }
 
   @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
