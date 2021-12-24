@@ -54,11 +54,13 @@ class _MyHomeAppState extends State<MyHomeApp> {
         backgroundColor: Colors.red,
       ),
 
-    body: Container(
-      height: 200.0,
-      width: 200.0,
-      color: Colors.red,
+    body: Center(
+      child: Container(
+        height: MediaQuery.of(context).size.height / 2,
+        width: MediaQuery.of(context).size.width / 2,
+        color: Colors.red,
       ),
+    ),
     );
 
     /*
