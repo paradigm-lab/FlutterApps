@@ -66,7 +66,8 @@ class _MyHomeAppState extends State<MyHomeApp> {
         child: const Icon(Icons.ac_unit),
         onPressed: () {
 
-          Navigator.of(context).pushNamed(screen2.routeName);
+          // Using the popAndPushNamed this take the screen out whereby we can't pop the screen again
+          Navigator.of(context).popAndPushNamed(screen2.routeName);
 
           /*
           Navigator.of(context).push(
