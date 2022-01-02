@@ -1,18 +1,28 @@
 //import 'package:demo/screen2.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 // We sue the statefulWidget when we have the functionality in our application
 
 // we can use the setState if we are using the statefulWidget
 class MyHomeApp extends StatefulWidget {
+  Future<String> getkanye() async {
+    try {
+      var response = await http.get("https://api.kanye.rest/");
+      print(response.body);
+    } catch(e) {
+      print(e);
+    }
+  }
   const MyHomeApp({Key? key}) : super(key: key);
-
   @override
   _MyHomeAppState createState() => _MyHomeAppState();
+
 }
 
 class _MyHomeAppState extends State<MyHomeApp> {
+
 
   /*
   List<int> dummy = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -49,11 +59,14 @@ class _MyHomeAppState extends State<MyHomeApp> {
 
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Programming Knowledge"),
         backgroundColor: Colors.red,
       ),
+
 
 
 
